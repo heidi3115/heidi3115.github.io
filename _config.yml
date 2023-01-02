@@ -12,6 +12,11 @@ show_excerpts: true # set to true to show excerpts on the homepage
 sass:
   sass_dir: _sass
 plainwhite:
+  navigation:
+    - title: My work
+      url: "/my-work"
+    - title: Resume
+      url: "/resume"
   name: minseon Kim
   tagline: Developer
   date_format: "%b %-d, %Y"
