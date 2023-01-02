@@ -1,28 +1,18 @@
 ---
-layout: post
-title:  "Integrating razorpay into your webapp"
+layout: home
+title:  "얘는 왜 안나오죠..?"
 date:   2023-01-02 21:30:00 +0900
 categories: Javascript NodeJS
 ---
-테스트 글입니다.
+테스트 글입니다.!!!!!!!!!!!!!!!!!!!!!
 
 ```javascript
-const Razorpay = require('razorpay');
+const [test, setTest] = useState('흑흑')
 
-let rzp = Razorpay({
-	key_id: 'KEY_ID',
-	secret: 'name'
-});
+return (
 
-// capture request
-rzp.capture(payment_id, cost)
-	.then(function (data) {
-		return 2;
-	})
+    <button onClick={()=> setTest('어흐흑')}>{test}</button>
+)
+
 ```
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+좀 나와바라
