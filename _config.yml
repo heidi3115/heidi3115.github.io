@@ -13,8 +13,8 @@ sass:
   sass_dir: _sass
 plainwhite:
   navigation:
-    - title: My work
-      url: "/my-work"
+    - title: Vue
+      url: "/vue"
     - title: Resume
       url: "/resume"
   name: minseon Kim
