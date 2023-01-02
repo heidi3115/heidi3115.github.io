@@ -8,8 +8,8 @@ categories: Vue
 
 <h4>당신은 지금 Vue 3 문서를 읽고있습니다!<br/></h4>
 1) Vue 2 지원은 2023년 12월 31일에 종료될 예정입니다.
-<a href="https://v2.vuejs.org/lts/">링크</a>에서 자세한 내용을 확인하세요.
-2) Vue 2 문서는 <a href="https://v2.vuejs.org/">v2.vuejs.org</a>로 이동하였습니다.
+<a href="https://v2.vuejs.org/lts/">링크</a>에서 자세한 내용을 확인하세요.<br/>
+2) Vue 2 문서는 <a href="https://v2.vuejs.org/">v2.vuejs.org</a>로 이동하였습니다.<br/>
 3) Vue 2에서 3로 업그레이드 하는 방법은 <a href="https://v3-migration.vuejs.org/">Migration Guide</a>를 확인하세요
 
 
