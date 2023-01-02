@@ -12,11 +12,11 @@ show_excerpts: true # set to true to show excerpts on the homepage
 sass:
   sass_dir: _sass
 plainwhite:
-  navigation:
-    - title: Vue
-      url: "/vue"
-    - title: Resume
-      url: "/resume"
+#  navigation:
+#    - title: Vue
+#      url: "/vue"
+#    - title: Resume
+#      url: "/resume"
   name: minseon Kim
   tagline: Developer
   date_format: "%Y,%b %-d"
