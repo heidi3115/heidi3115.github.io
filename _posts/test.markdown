@@ -1,7 +1,7 @@
 ---
-layout: home
+layout: post
 title:  "얘는 왜 안나오죠..?"
-date:   2023-01-02 21:30:00 +0900
+date:   2023-01-01 21:30:00 +0900
 categories: Javascript NodeJS
 ---
 테스트 글입니다.!!!!!!!!!!!!!!!!!!!!!
