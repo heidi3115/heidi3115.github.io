@@ -1,8 +1,10 @@
 ---
 layout: post
 title:  "Vue.js 소개"
-date:   2023-01-02 21:34:36 +0900
-categories: Vue
+
+[//]: # (date:   2023-01-02 21:34:36 +0900)
+
+[//]: # (categories: Vue)
 ---
 <h1>Introduction</h1>
 

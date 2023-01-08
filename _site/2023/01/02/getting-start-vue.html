@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link href="https://fonts.googleapis.com/css?family=Merriweather:300|Raleway:400,700" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+<title>Vue.js 소개</title>
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Vue.js 소개 | 개발괴발</title>
+<meta name="generator" content="Jekyll v4.3.1" />
+<meta property="og:title" content="Vue.js 소개" />
+<meta name="author" content="GitHub User" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Introduction" />
+<meta property="og:description" content="Introduction" />
+<link rel="canonical" href="http://localhost:4000/2023/01/02/getting-start-vue.html" />
+<meta property="og:url" content="http://localhost:4000/2023/01/02/getting-start-vue.html" />
+<meta property="og:site_name" content="개발괴발" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-01-02T00:00:00+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Vue.js 소개" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"GitHub User"},"dateModified":"2023-01-02T00:00:00+09:00","datePublished":"2023-01-02T00:00:00+09:00","description":"Introduction","headline":"Vue.js 소개","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2023/01/02/getting-start-vue.html"},"url":"http://localhost:4000/2023/01/02/getting-start-vue.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<script type="text/javascript" src="/assets/js/darkmode.js"></script>
+
+</head><body>
+  <main class="container">
+    <section class="about">
+      <div class="about-header condensed">
+      <div class="about-title">
+      <a href="/">
+        
+        <img src="/assets/portfolio.png" alt="minseon Kim" />
+        
+      </a>
+      <h2 id="title">
+        <a href="/">minseon Kim</a>
+      </h2>
+      </div><p class="tagline">Developer</p></div>
+      
+      <ul class="social about-footer condensed"><a href="https://github.com/heidi3115" target="_blank">
+          <li>
+            <i class="icon-github-circled"></i>
+          </li>
+        </a></ul><nav class="navigation about-footer condensed">
+        <ul>
+          
+          <li>
+            <a href="/javascript">Javascript</a>
+          </li>
+          
+        </ul>
+      </nav><p class="about-footer condensed">&copy;
+        2023</p><div class="about-footer condensed">
+        <p>Dark Mode
+          <i class="icon-moon"></i>
+          <label class="switch">
+            <input type="checkbox" class="dark-mode-toggle">
+            <span class="slider round" onclick="toggleDarkMode()"></span>
+          </label>
+        </p>
+      </div>
+    </section>
+    <section class="content">
+      <div class="post-container">
+  <a class="post-link" href="/2023/01/02/getting-start-vue.html">
+    <h2 class="post-title">Vue.js 소개</h2>
+  </a>
+  <div class="post-meta">
+    <div class="post-date"><i class="icon-calendar"></i>2023,Jan 2</div></div>
+  <div class="post">
+    <h1>Introduction</h1>
+
+<h4>당신은 지금 Vue 3 문서를 읽고있습니다!<br /></h4>
+<p>1) Vue 2 지원은 2023년 12월 31일에 종료될 예정입니다.
+<a href="https://v2.vuejs.org/lts/">링크</a>에서 자세한 내용을 확인하세요.<br />
+2) Vue 2 문서는 <a href="https://v2.vuejs.org/">v2.vuejs.org</a>로 이동하였습니다.<br />
+3) Vue 2에서 3로 업그레이드 하는 방법은 <a href="https://v3-migration.vuejs.org/">Migration Guide</a>를 확인하세요</p>
+
+<h2>Vue는 무엇일까요?</h2>
+
+<p>vue(뷰)는 사용자 인터페이스를 구축하기 위한 Javascript의 프레임워크입니다. 
+표준 HTML, CSS 및 JavaScript를 기반으로 구축되며 간단하거나 복잡한 사용자 인터페이스를 
+효율적으로 개발하는 데 도움이 되는 선언적 구성 요소 기반 프로그래밍 모델을 제공합니다.</p>
+
+<p>간단한 샘플코드를 확인해보세요 :</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">createApp</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">vue</span><span class="dl">'</span>
+
+<span class="nx">createApp</span><span class="p">({</span>
+  <span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span>
+      <span class="na">count</span><span class="p">:</span> <span class="mi">0</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}).</span><span class="nx">mount</span><span class="p">(</span><span class="dl">'</span><span class="s1">#app</span><span class="dl">'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div id="app"&gt;
+  &lt;button @click="count++"&gt;
+    Count is: 9
+  &lt;/button&gt;
+&lt;/div&gt;
+</code></pre></div></div>
+
+<p>해당 예제는 클릭할때마다 숫자가 1씩 더해지는 버튼을 만들어냅니다.
+이 예제는 Vue의 두 가지 핵심 기능을 보여줍니다.</p>
+
+<p><span style="font-weight:700; font-size:16px">선언적 렌더링</span> : Vue는 Javascript 상태를 기반으로 HTML 출력을 선언적으로 설명할 수 있는 템플릿 구문으로, 표준 HTML을 확장합니다. <br />
+<span style="font-weight:700; font-size:16px">반응성</span> : Vue는 JavaScript 상태 변경을 자동으로 추적하고 변경이 발생할 때 DOM을 효율적으로 업데이트합니다.</p>
+
+<p>이쯤되면 당신은 질문이 있을 수 있습니다. 하지만 걱정하지 마세요. 남은 문서들에서 세부 내용을 다룰것입니다.</p>
+
+  </div></div>
+
+    </section>
+    <footer class="condensed">
+      <ul class="social about-footer condensed"><a href="https://github.com/heidi3115" target="_blank">
+          <li>
+            <i class="icon-github-circled"></i>
+          </li>
+        </a></ul><nav class="navigation about-footer condensed">
+        <ul>
+          
+          <li>
+            <a href="/javascript">Javascript</a>
+          </li>
+          
+        </ul>
+      </nav><p class="about-footer condensed">&copy;
+        2023</p><div class="about-footer condensed">
+        <p>Dark Mode
+          <i class="icon-moon"></i>
+          <label class="switch">
+            <input type="checkbox" class="dark-mode-toggle">
+            <span class="slider round" onclick="toggleDarkMode()"></span>
+          </label>
+        </p>
+      </div>
+    </footer>
+  </main>
+  
+  <script type="text/javascript" src="/assets/js/darkmode.js"></script>
+  
+  <script src="/assets/js/simple-jekyll-search.min.js"></script>
+  <script src="/assets/js/search.js"></script>
+  
+</body>
+
+</html>

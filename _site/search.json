@@ -1,14 +1,38 @@
 [
   
     {
+      "title"    : "React의 라이프 사이클 메서드",
+      "title-lower"    : "react의 라이프 사이클 메서드",
+      "sub-titile" : "",
+      "sub-titile-lower" : "",
+      "categories" : "",
+      "tags"     : "",
+      "url"      : "/2023/01/08/react-life-cycle-method.html",
+      "date"     : "2023-01-08 00:00:00 +0900",
+      "content"     : "React의 Hooks 1. useEffect모든 리액트 컴포넌트에는 라이프사이클이 존재한다.라이프 사이클(life-cycle)이란 직역하자면 생명 주기라는 뜻이다.컴포넌트의 수명은 페이지 준비 과정에서 시작되어 페이지에서 사라질때 끝난다.첫 렌더링에 특정 작업이 함께 이루어져야 하는 경우 혹은 컴포넌트를 업데이트 하기 전과 하고 나서 처리해야 하는 ..."
+    } ,
+  
+    {
+      "title"    : "Javascript-01. 동기 / 비동기 처리",
+      "title-lower"    : "javascript-01. 동기 / 비동기 처리",
+      "sub-titile" : "",
+      "sub-titile-lower" : "",
+      "categories" : "",
+      "tags"     : "",
+      "url"      : "/2023/01/08/javascript-01.html",
+      "date"     : "2023-01-08 00:00:00 +0900",
+      "content"     : "Javascript-01. 동기 / 비동기 처리이번 글에서는 자바스크립트에서 비동기 처리를 어떻게 하는지에 대해서 작성하겠다.우선 동기적 처리와 비동기적 처리가 어떻게 다른지에 대한 설명을 아래 그림을 통해 알아보자.작업을 동기적으로 처리하게 된다면, 그림의 동기적 처리 부분처럼 순차적으로 작업을 진행하게 된다.작업이 끝날때까지 기다리는 동안 중지상태..."
+    } ,
+  
+    {
       "title"    : "Vue.js 소개",
       "title-lower"    : "vue.js 소개",
       "sub-titile" : "",
       "sub-titile-lower" : "",
-      "categories" : "Vue",
+      "categories" : "",
       "tags"     : "",
-      "url"      : "/vue/2023/01/02/getting-start-vue.html",
-      "date"     : "2023-01-02 21:34:36 +0900",
+      "url"      : "/2023/01/02/getting-start-vue.html",
+      "date"     : "2023-01-02 00:00:00 +0900",
       "content"     : "Introduction당신은 지금 Vue 3 문서를 읽고있습니다!1) Vue 2 지원은 2023년 12월 31일에 종료될 예정입니다.링크에서 자세한 내용을 확인하세요.2) Vue 2 문서는 v2.vuejs.org로 이동하였습니다.3) Vue 2에서 3로 업그레이드 하는 방법은 Migration Guide를 확인하세요Vue는 무엇일까요?vue(뷰)는 사..."
     } 
   
