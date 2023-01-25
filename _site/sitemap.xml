@@ -6,9 +6,14 @@
                 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
         <url>
             <loc>http://localhost:4000</loc>
-	    <lastmod>2023-01-16T02:08:29+09:00</lastmod>
+	    <lastmod>2023-01-26T00:59:01+09:00</lastmod>
             <priority>1.00</priority>
         </url><url>
+                <loc>http://localhost:4000/2023/01/22/javascript-03.html</loc>
+                <lastmod>2023-01-22T00:00:00+09:00</lastmod>
+                <changefreq>weekly</changefreq>
+                <priority>0.80</priority>
+            </url><url>
                 <loc>http://localhost:4000/2023/01/15/javascript-02.html</loc>
                 <lastmod>2023-01-15T00:00:00+09:00</lastmod>
                 <changefreq>weekly</changefreq>

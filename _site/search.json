@@ -1,6 +1,18 @@
 [
   
     {
+      "title"    : "Javascript-03. async와 await",
+      "title-lower"    : "javascript-03. async와 await",
+      "sub-titile" : "",
+      "sub-titile-lower" : "",
+      "categories" : "",
+      "tags"     : "",
+      "url"      : "/2023/01/22/javascript-03.html",
+      "date"     : "2023-01-22 00:00:00 +0900",
+      "content"     : "Javascript-03. async와 await이번에는 자바스크립트에서 비동기 처리 작업을 할 때 promise를 좀 더 쉽게 사용할 수 있게 해주는 async/await 라는 문법에 대해 작성하겠다.우선 promise를 만드는 함수를 작성해보자function wait (sec) {    return new Promise (resolve =&amp;..."
+    } ,
+  
+    {
       "title"    : "Javascript-02. Promise",
       "title-lower"    : "javascript-02. promise",
       "sub-titile" : "",
