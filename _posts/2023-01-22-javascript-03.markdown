@@ -1,0 +1,54 @@
+---
+layout: post
+title:  "Javascript-03. async와 await"
+
+[//]: # (date:   2023-01-02 21:34:36 +0900)
+
+[//]: # (categories: Javascript)
+---
+
+[//]: # (<h1>Introduction</h1>)
+
+<h3>Javascript-03. async와 await</h3>
+
+이번에는 자바스크립트에서 비동기 처리 작업을 할 때 promise를 좀 더 쉽게 사용할 수 있게 해주는 async/await 라는 문법에 대해 작성하겠다.<br />
+
+우선 promise를 만드는 함수를 작성해보자
+
+```javascript
+function wait (sec) {
+    return new Promise (resolve => setTimeout(resolve, sec))
+}
+```
+특정 초(sec) 이후에 resolve함수가 호출되어 promise가 끝나게 될 함수를 작성해 보았다.
+이제 바로 하단에 async와 await 문법을 적용한 함수를 만들어 보겠다.
+
+```javascript
+async function test () {
+    console.log('와!')
+    await wait(5000)
+    console.log('5초가 지났네')
+}
+
+
+test()
+
+```
+
+위에 작성된 코드를 살펴보면 '와!'가 먼저 콘솔에 찍히고, 5초 후에 '5초가 지났네'가 콘솔에 찍히는 것을 확인할 수 있다.
+
+<img src="/assets/javascript-03/javascript-03.png" height="200" width="300" >
+
+
+
+async / await 문법을 사용할 땐 이처럼 함수 앞에 async를 붙여주고, promise의 앞부분에는 await를 붙여주어 간단하게 사용 가능하다.
+
+
+
+function 앞에 async를 붙이면 해당 함수는 **항상, 반드시** promise를 반환하고,
+await는 async함수 안에서만 동작한다.
+
+즉, await를 사용하면 일반 비동기 작업처럼 바로 실행이 다음 라인으로 넘어가는 것이 아니라 결과값을 얻을 수 있을 때까지 기다리게 되는 것이다.
+
+따라서 일반적인 동기 작업과 동일한 흐름으로 코드를 작성할 수 있으며, 코드 가독성도 좋아진다는 장점이 있다.
+
