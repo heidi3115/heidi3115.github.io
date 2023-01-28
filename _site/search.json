@@ -1,6 +1,18 @@
 [
   
     {
+      "title"    : "Javascript-04. Promise.all / Promise.race",
+      "title-lower"    : "javascript-04. promise.all / promise.race",
+      "sub-titile" : "",
+      "sub-titile-lower" : "",
+      "categories" : "",
+      "tags"     : "",
+      "url"      : "/2023/01/28/javascript-04.html",
+      "date"     : "2023-01-28 00:00:00 +0900",
+      "content"     : "Javascript-04. Promise.all / Promise.race앞서 작성한 글들을 통해 자바스크립트에서 promise와 async/await를 사용하여 비동기 작업을 쉽게 사용하는 방법도 알아보았다.그렇다면 여러 개의 비동기 처리를 한 번에 하고 싶다면 어떻게 해야할까?우선 여러 개의 promise를 작성해보자.function wait (s..."
+    } ,
+  
+    {
       "title"    : "Javascript-03. async와 await",
       "title-lower"    : "javascript-03. async와 await",
       "sub-titile" : "",

@@ -13,10 +13,16 @@ sass:
   sass_dir: _sass
 plainwhite:
   navigation:
+#    - title: 강의 정리
+#      url: /classNotes
 #    - title: 코딩테스트
 #      url: /codingTests
     - title: Javascript
       url: /javascript
+#    - title: IT 지식
+#      url: /itPost
+#    - title: 자격증 공부
+#      url: /study
   name: minseon Kim
   tagline: Developer
   date_format: "%Y,%b %-d"

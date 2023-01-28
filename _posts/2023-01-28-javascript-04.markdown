@@ -1,0 +1,117 @@
+---
+layout: post
+title:  "Javascript-04. Promise.all / Promise.race"
+
+[//]: # (date:   2023-01-02 21:34:36 +0900)
+
+[//]: # (categories: Javascript)
+---
+
+[//]: # (<h1>Introduction</h1>)
+
+<h3>Javascript-04. Promise.all / Promise.race</h3>
+
+앞서 작성한 글들을 통해 자바스크립트에서 promise와 async/await를 사용하여 비동기 작업을 쉽게 사용하는 방법도 알아보았다.
+그렇다면 여러 개의 비동기 처리를 한 번에 하고 싶다면 어떻게 해야할까?
+
+우선 여러 개의 promise를 작성해보자.
+
+```javascript
+
+function wait (sec) {
+    return new Promise (resolve => setTimeout(resolve, sec))
+}
+
+const getFirst = async () => {
+    await wait(1000)
+    return '난 1등'
+}
+const getSecond = async () => {
+    await wait(3000)
+    return '난 2등'
+}
+const getThird = async () => {
+    await wait(5000)
+    return '난 3등'
+}
+
+
+async function test () {
+    const first = await getFirst()
+    console.log(first)
+    const second = await getSecond()
+    console.log(second)
+    const third = await getThird()
+    console.log(third)
+}
+
+
+test()
+
+```
+
+총 세 개의 promise를 작성하여 test라는 함수로 각 promise를 호출해보았다.
+
+getFirst가 실행되고 1초 후 **난 1등**이라는 값을 던져주고, 그 후에 getSecond가 실행되고 3초 후에 **난 2등**이라는 값을
+콘솔에 던져주는 것을 확인할 수 있다. 마찬가지로 getThrid가 실행되고 5초 후에 **난 3등**이라는 값이 콘솔에 나타나는 것까지 확인할 수 있다.
+
+이처럼 세가지 promise를 호출하여 모든 콘솔이 찍히기까지 약 9초가 걸린 것을 확인할 수 있다.
+
+
+
+<h3 style="margin-top:100px">여러 개의 Promise를 동시에 처리하고 싶다면?</h3>
+
+앞서 작성한 코드는 총 9초에 걸쳐 각각의 값을 반환하는 코드였다. 이런 경우 Promise.all을 사용한다면 훨씬 시간을 단축하여 결과를 얻을 수 있다.
+이 코드를 Promise.all으로 수정해보겠다.
+
+
+```javascript
+
+async function test () {
+    const result = await Promise.all([getFirst(), getSecond(), getThird()])
+    console.log(result)
+}
+
+
+test()
+```
+
+Promise.all은 배열 안에 여러개의 Promise를 넣어 사용한다. 이 때, 반환될 값은 여러 개의 promise 중 가장 나중에 끝나는 promise가 끝나고나서야 반환이 된다.
+이 때 **반환 순서는 완료 순서가 아닌 실행 순서대로 반환이 된다.**
+
+위 코드의 결과는 [**'난 1등','난 2등','난 3등'**]으로, 가장 오래걸리는 getThird의 **난 3등** 작업이 끝남(5초)과 동시에 배열에 담아 한번에 호출해주는 것을 확인할 수 있다.
+콘솔이 찍히기까지 약 5초면 모든 결과 값을 확인할 수 있는 것이다.
+
+<div style="background: #f2f2f2; padding: 10px">
+⚠️ Promise.all은 담긴 promise 중 하나라도 에러가 나면 전체를 에러로 반환한다.
+</div>
+
+
+
+<h3 style="margin-top:100px">Promise.race 란?</h3>
+
+Promise.race()는 Promise.all()과 마찬가지로 배열에 담긴 프로미스를 병렬로 요청한다.
+다만 Promise.all이 모든 요청이 완료 되기를 기다리는 것과 달리, 가장 먼저 완료된 요청만 반환된다.
+
+
+위에 작성했던 코드를 Promise.race로 바꿔보겠다.
+
+```javascript
+
+async function test () {
+    const result = await Promise.race([getFirst(), getSecond(), getThird()])
+    console.log(result)
+}
+
+
+test()
+```
+
+Promise.all로 작성했던 부분을 Promise.race로 변경해주었다. 
+
+Promise.all의 모든 값이 배열에 한번에 담아져나왔을 때와 달리 Promise.race는 가장 먼저 작업이 끝난 **난 1등** 만 콘솔에 찍히는 것을 확인할 수 있다.
+
+
+<div style="background:#f2f2f2; padding: 10px">
+📍 Promise.race는 가장 먼저 끝난 작업이 에러일 때만 catch 구문으로 넘어간다.
+</div>
