@@ -19,10 +19,12 @@ plainwhite:
 #      url: /codingTests
     - title: Javascript
       url: /javascript
-#    - title: IT 지식
-#      url: /itPost
+    - title: IT 지식
+      url: /itPost
 #    - title: 자격증 공부
 #      url: /study
+#    - title: 기타
+#      url: /other
   name: minseon Kim
   tagline: Developer
   date_format: "%Y,%b %-d"
