@@ -6,11 +6,11 @@
                 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
         <url>
             <loc>http://localhost:4000</loc>
-	    <lastmod>2023-02-06T02:13:53+09:00</lastmod>
+	    <lastmod>2023-02-06T02:27:47+09:00</lastmod>
             <priority>1.00</priority>
         </url><url>
-                <loc>http://localhost:4000/it/2023/01/30/itPost-http.html</loc>
-                <lastmod>2023-01-30T00:00:00+09:00</lastmod>
+                <loc>http://localhost:4000/it/2023/02/05/itPost-HTTP.html</loc>
+                <lastmod>2023-02-05T00:00:00+09:00</lastmod>
                 <changefreq>weekly</changefreq>
                 <priority>0.80</priority>
             </url><url>

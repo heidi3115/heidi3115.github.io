@@ -7,8 +7,8 @@
       "sub-titile-lower" : "",
       "categories" : "IT",
       "tags"     : "",
-      "url"      : "/it/2023/01/30/itPost-http.html",
-      "date"     : "2023-01-30 00:00:00 +0900",
+      "url"      : "/it/2023/02/05/itPost-HTTP.html",
+      "date"     : "2023-02-05 00:00:00 +0900",
       "content"     : "HTTP의 구조HTTP는 HTML 문서와 같은 텍스트로 되어있는 리소스(데이터)들을 가져올 수 있도록 해주는 프로토콜(통신규약)이다. 프로토콜이란 컴퓨터들끼리 HTML 파일을 주고받을 수 있게 도와주는 소통방식 또는 약속이다.클라이언트와 서버 간의 통신을 효율적으로 하기 위한 HTTP의 특징에 대해 적어보겠다.ConnectionlessHTTP의 첫번째..."
     } ,
   
