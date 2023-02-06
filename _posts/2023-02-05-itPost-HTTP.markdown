@@ -37,7 +37,7 @@ HTTP는 Stateless(무상태)다. 클라이언트와 서버 관계에서 서버�
 URL(Uniform Resource Locators)은 서버에 자원을 요청하기 위해 입력하는 영문 주소이다.
 URL의 구조는 아래와 같다.
 
-[//]: # (<img src="/assets/javascript-01/1.png">)
+<img src="/assets/itPost/1.png" height="80" width="500"/>
 
 * Protocol
 * Domain
@@ -52,14 +52,14 @@ URL의 구조는 아래와 같다.
 
 ### Response / Request
 
-[//]: # (<img src="/assets/javascript-01/1.png">)
+<img src="/assets/itPost/2.png" />
 
 HTTP 메시지는 서버와 클라이언트 간에 데이터가 교환되는 방식으로, 이때 메시지 타입은 Response와 Request로 나뉜다.  
 그림과 같이 Request는 클라이언트 -> 서버로 전달하는 메시지고, Response는 Request에 대한 서버의 응답이다.
 
 메세지는 세 부분으로 이루어져 있다.
 
-[//]: # (<img src="/assets/javascript-01/1.png">)
+<img src="/assets/itPost/3.png" />
 
 #### Request
 * Start Line
