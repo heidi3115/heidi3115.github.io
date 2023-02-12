@@ -1,6 +1,18 @@
 [
   
     {
+      "title"    : "강의 정리 - HTML / CSS 소개",
+      "title-lower"    : "강의 정리 - html / css 소개",
+      "sub-titile" : "",
+      "sub-titile-lower" : "",
+      "categories" : "Notes",
+      "tags"     : "",
+      "url"      : "/notes/2023/02/12/classNotes-HTML-CSS.html",
+      "date"     : "2023-02-12 00:00:00 +0900",
+      "content"     : "HTML이란?HTML은 Hyper Text Markup Language의 약자로 웹 페이지를 만들 때 사용하는 자료 구조 표현 언어를 뜻한다. 자료는 마음대로 표현하는 것이 아니라 HTML의 정해진 태그로 나눠두어 자료의 구조를 표현할 수 있어야 한다.HTML에서 사용하는 태그들은 다음과 같다.  &amp;lt;p&amp;gt;&amp;lt;/p&am..."
+    } ,
+  
+    {
       "title"    : "http의 구조 / 요소",
       "title-lower"    : "http의 구조 / 요소",
       "sub-titile" : "",

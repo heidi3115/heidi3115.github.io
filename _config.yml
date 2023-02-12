@@ -13,8 +13,8 @@ sass:
   sass_dir: _sass
 plainwhite:
   navigation:
-#    - title: 강의 정리
-#      url: /classNotes
+    - title: 강의 정리
+      url: /classNotes
 #    - title: 코딩테스트
 #      url: /codingTests
     - title: Javascript
