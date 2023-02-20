@@ -16,17 +16,12 @@ date:   2023-01-02 21:34:36 +0900
     <a href="/javascript/2023/01/28/javascript-04.html">4. Promise All / Promise.race</a><br />
 </div>
 
-[//]: # (<div style='font-size:20px'>)
-
-[//]: # (    <h2>자바스크립트 문법</h2>)
-
-[//]: # (    <a href="/javascript/2023/01/08/javascript-01.html">1. 비구조화 할당&#40;구조 분해&#41;</a><br />)
-
-[//]: # (    <a href="/javascript/2023/01/15/javascript-02.html">2. Spread / rest</a><br />)
-
-[//]: # (</div>)
-
-
+<br />
+<div style='font-size:20px'>
+    <h2>자바스크립트 문법</h2>
+    <a href="/javascript/2023/02/19/javascript-05.html"> - for 문과 while 문의 차이</a><br />
+    <a href="/javascript/2023/02/19/javascript-06.html"> - 틸드 연산자 / 더블 틸드 연산자</a><br />
+</div>
 <style>
 div {
 }
