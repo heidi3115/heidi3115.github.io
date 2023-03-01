@@ -20,7 +20,7 @@ CORS는 Cross Origin Resource Sharing의 약자이다.
 CORS에 대해 이해하기 위해서는 먼저 출처라는 개념에 대해 알아야 한다.    
 다음 이미지를 확인해보자.
 
-![img_1.png](img_1.png)
+<img src="/assets/itPost/itPost_cors.png">
 
 위 구성요소 중 Protocol+Host+Port 세가지가 같으면 동일 출처(origin)라고 한다.
 
