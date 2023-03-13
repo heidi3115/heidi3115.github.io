@@ -13,7 +13,7 @@ sass:
   sass_dir: _sass
 plainwhite:
   navigation:
-    - title: 강의 정리
+    - title: 공부
       url: /classNotes
 #    - title: 코딩테스트
 #      url: /codingTests

@@ -6,9 +6,19 @@
                 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
         <url>
             <loc>http://localhost:4000</loc>
-	    <lastmod>2023-03-02T03:01:30+09:00</lastmod>
+	    <lastmod>2023-03-13T12:21:17+09:00</lastmod>
             <priority>1.00</priority>
         </url><url>
+                <loc>http://localhost:4000/notes/2023/03/13/study-1.html</loc>
+                <lastmod>2023-03-13T00:00:00+09:00</lastmod>
+                <changefreq>weekly</changefreq>
+                <priority>0.80</priority>
+            </url><url>
+                <loc>http://localhost:4000/it/2023/03/05/itPost-Proxy.html</loc>
+                <lastmod>2023-03-05T00:00:00+09:00</lastmod>
+                <changefreq>weekly</changefreq>
+                <priority>0.80</priority>
+            </url><url>
                 <loc>http://localhost:4000/it/2023/02/26/itPost-CORS.html</loc>
                 <lastmod>2023-02-26T00:00:00+09:00</lastmod>
                 <changefreq>weekly</changefreq>
