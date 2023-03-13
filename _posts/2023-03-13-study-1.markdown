@@ -22,7 +22,7 @@ categories: Notes
 우선 필기 책 구매는 2월 1일에 하였고, 2월 2일 오후에 배송받았다.
 책은 그냥 미리보기로 보고 가독성 좋아보이는 것으로 구매하였다.
 
-<img src="../assets/study/study_1.png">
+<img src="/assets/study/study_1.png" width="400" height="150">
 
 네이버 쇼핑몰에서 구매하니 분철 서비스를 해준다고 해서 추가금을 내고 분철된 책으로 공부하였다.   
 책을 배송받고 바로 공부를 하고 싶었으나 바쁜 일정들과 업무에 필요한 공부 등 생각보다 시간이 나질 않아 사실상 이 책으로 공부한 것은 사실...   
@@ -30,12 +30,14 @@ categories: Notes
 
 ### 물론 그 전부터 cbt 기출문제 어플을 다운받아서 출퇴근길에 틈틈이 풀곤 했다.
 
-<img src="../assets/study/study_2.jpeg">
-<img src="../assets/study/study_3.jpeg">
+<img src="/assets/study/study_2.jpeg" width="500" height="150">
+
+
+<img src="/assets/study/study_3.jpeg" width="300" height="700">
 
 이 어플 추천! IT 위키랑 연결돼있고 댓글도 달 수 있어서 다른 이용자들이 달아준 해설과 함께 공부할 수 있다.
 
-<img src="../assets/study/study_4.jpeg">
+<img src="/assets/study/study_4.jpeg" width="500" height="400">
 
 (누가보면 엄청난 시험 공부 하는 줄)
 
@@ -105,7 +107,7 @@ CBT 형식의 좋은 점은 제출하자마자 결과를 확인할 수 있다는
 ### 이제는.. 실기야...
 
 
-<img src="../assets/study/study_5.png">
+<img src="/assets/study/study_5.png" width="500" height="400">
 
 
 이젠 실기시험을 준비해야한다... 벌써 어지럽다.   
