@@ -1,6 +1,18 @@
 [
   
     {
+      "title"    : "연속된 수의 합",
+      "title-lower"    : "연속된 수의 합",
+      "sub-titile" : "",
+      "sub-titile-lower" : "",
+      "categories" : "Javascript",
+      "tags"     : "",
+      "url"      : "/javascript/2023/03/26/javascript-07.html",
+      "date"     : "2023-03-26 00:00:00 +0900",
+      "content"     : "문제연속된 세 개의 정수를 더해 12가 되는 경우는 3, 4, 5입니다. 두 정수 num과 total이 주어집니다. 연속된 수 num개를 더한 값이 total이 될 때,   정수 배열을 오름차순으로 담아 return하도록 solution함수를 완성해보세요.제한사항1 ≤ num ≤ 1000 ≤ total ≤ 1000num개의 연속된 수를 더하여 tota..."
+    } ,
+  
+    {
       "title"    : "정보처리기사 필기 시험 후기 &amp; 준비물 &amp; 주의사항",
       "title-lower"    : "정보처리기사 필기 시험 후기 &amp; 준비물 &amp; 주의사항",
       "sub-titile" : "",
@@ -37,8 +49,8 @@
     } ,
   
     {
-      "title"    : "강의 정리 - HTML / CSS 소개",
-      "title-lower"    : "강의 정리 - html / css 소개",
+      "title"    : "틸드 연산자 / 더블 틸드 연산자",
+      "title-lower"    : "틸드 연산자 / 더블 틸드 연산자",
       "sub-titile" : "",
       "sub-titile-lower" : "",
       "categories" : "Javascript",
@@ -49,8 +61,8 @@
     } ,
   
     {
-      "title"    : "강의 정리 - HTML / CSS 소개",
-      "title-lower"    : "강의 정리 - html / css 소개",
+      "title"    : "for문과 while문의 차이",
+      "title-lower"    : "for문과 while문의 차이",
       "sub-titile" : "",
       "sub-titile-lower" : "",
       "categories" : "Javascript",
@@ -58,6 +70,18 @@
       "url"      : "/javascript/2023/02/19/javascript-05.html",
       "date"     : "2023-02-19 00:00:00 +0900",
       "content"     : "반복문은 어떠한 작업 혹은 코드들의 반복적인 실행이 필요할 때 사용하는 문법으로, 불필요한 중복 코드들을 최소화할 수 있어 잘 알아두면 쓸 데가 무척 많다.자바스크립트에서는 for, while 두가지 반복문을 주로 사용하는데, 둘은 비슷해보이지만 명백한 차이점을 가지고 있다.어떨 때 for문을 사용하고, 어떨 때 while문을 사용하는지 알아보자.fo..."
+    } ,
+  
+    {
+      "title"    : "강의 정리 - HTML / CSS 소개",
+      "title-lower"    : "강의 정리 - html / css 소개",
+      "sub-titile" : "",
+      "sub-titile-lower" : "",
+      "categories" : "Notes",
+      "tags"     : "",
+      "url"      : "/notes/2023/02/12/classNotes-RegularExpression.html",
+      "date"     : "2023-02-12 00:00:00 +0900",
+      "content"     : "HTML이란?HTML은 Hyper Text Markup Language의 약자로 웹 페이지를 만들 때 사용하는 자료 구조 표현 언어를 뜻한다. 자료는 마음대로 표현하는 것이 아니라 HTML의 정해진 태그로 나눠두어 자료의 구조를 표현할 수 있어야 한다.HTML에서 사용하는 태그들은 다음과 같다.  &amp;lt;p&amp;gt;&amp;lt;/p&am..."
     } ,
   
     {
