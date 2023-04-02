@@ -30,6 +30,7 @@ date:   2023-01-02 21:34:36 +0900
     <a href="/javascript/2023/03/26/javascript-07.html"> - 연속된 수의 합</a><br />
     <a href="/javascript/2023/03/26/javascript-08.html"> - 컨트롤 제트</a><br />
     <a href="/javascript/2023/04/02/javascript-09.html"> - 개미군단</a><br />
+    <a href="/javascript/2023/04/02/javascript-10.html"> - 중앙값 구하기</a><br />
 </div>
 
 

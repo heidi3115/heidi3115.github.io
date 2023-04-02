@@ -1,6 +1,18 @@
 [
   
     {
+      "title"    : "중앙 값 구하기",
+      "title-lower"    : "중앙 값 구하기",
+      "sub-titile" : "",
+      "sub-titile-lower" : "",
+      "categories" : "Javascript",
+      "tags"     : "",
+      "url"      : "/javascript/2023/04/02/javascript-10.html",
+      "date"     : "2023-04-02 00:00:00 +0900",
+      "content"     : "문제중앙값은 어떤 주어진 값들을 크기의 순서대로 정렬했을 때 가장 중앙에 위치하는 값을 의미합니다. 예를 들어 1, 2, 7, 10, 11의 중앙값은 7입니다. 정수 배열 array가 매개변수로 주어질 때, 중앙값을 return 하도록 solution 함수를 완성해보세요.제한사항  array의 길이는 홀수입니다.  0 &amp;lt; array의 길이..."
+    } ,
+  
+    {
       "title"    : "개미 군단",
       "title-lower"    : "개미 군단",
       "sub-titile" : "",
