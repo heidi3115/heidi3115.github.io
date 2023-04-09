@@ -44,7 +44,7 @@ categories: Notes
 완전 초보자가 이 책으로 공부하려면 구글링을 함께 하면서 공부해야 좀 더 도움을 받을 수 있을 것이다.
 
 
-#### 2. SQLD 개발자 기출문제 500제
+#### 2. SQL 개발자 기출문제 500제
 <img src="/assets/study/study_9.jpeg" width="300" height="300">
 <img src="/assets/study/study_7.jpeg" width="300" height="300">
 
