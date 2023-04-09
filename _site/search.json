@@ -1,6 +1,18 @@
 [
   
     {
+      "title"    : "SQLD(SQL 개발자) 시험 후기 &amp; 준비물 &amp; 주의사항",
+      "title-lower"    : "sqld(sql 개발자) 시험 후기 &amp; 준비물 &amp; 주의사항",
+      "sub-titile" : "",
+      "sub-titile-lower" : "",
+      "categories" : "Notes",
+      "tags"     : "",
+      "url"      : "/notes/2023/04/07/study-2.html",
+      "date"     : "2023-04-07 00:00:00 +0900",
+      "content"     : "SQLD(SQL 개발자) 시험 후기1. SQLD 시험 응시 계기 내가 SQLD 시험에 응시하게 된 계기는 크게 세가지다. 우선, 나는 데이터베이스 자체에 큰 관심을 가지고 있었다. 애초에 개발을 시작하게 된 이유 중에 하나도 인풋 아웃풋이 확실해서였는데, DB야 말로 인풋 아웃풋의 결정체(?)같은 느낌.그런데 나는 왜 프론트앤드로 개발을 시작했는가....."
+    } ,
+  
+    {
       "title"    : "중앙 값 구하기",
       "title-lower"    : "중앙 값 구하기",
       "sub-titile" : "",
