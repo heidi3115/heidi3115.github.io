@@ -1,6 +1,18 @@
 [
   
     {
+      "title"    : "SSE vs Websocket",
+      "title-lower"    : "sse vs websocket",
+      "sub-titile" : "",
+      "sub-titile-lower" : "",
+      "categories" : "IT",
+      "tags"     : "",
+      "url"      : "/it/2023/04/24/itPost-SSE.html",
+      "date"     : "2023-04-24 00:00:00 +0900",
+      "content"     : "SSE와 Websocket1. Websocket 웹소켓웹소켓은 HTTP와 같은 통신 프로토콜의 일종으로, 서버와 클라이언트 간의 효율적 양방향 통신을 실현하기 위한 구조이다. 단순한 API로 구성되어 있으며, 브라우저는 서버가 직접 보내는 데이터를 받아들일 수 있고, 새로고침 및 다른 페이지로 이동하지 않아도 최신 데이터를 확인할 수 있다는 장점이 있..."
+    } ,
+  
+    {
       "title"    : "SQLD(SQL 개발자) 시험 후기 &amp; 준비물 &amp; 주의사항",
       "title-lower"    : "sqld(sql 개발자) 시험 후기 &amp; 준비물 &amp; 주의사항",
       "sub-titile" : "",
