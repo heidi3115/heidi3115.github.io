@@ -1,0 +1,51 @@
+---
+layout: post
+title:  "정수 제곱근 판별"
+
+[//]: # (date:   2023-01-02 21:34:36 +0900)
+
+categories: Javascript
+---
+
+[//]: # (<h1>Introduction</h1>)
+
+### 문제
+
+<div class="text">
+임의의 양의 정수 n에 대해, n이 어떤 양의 정수 x의 제곱인지 아닌지 판단하려 합니다.   
+n이 양의 정수 x의 제곱이라면 x+1의 제곱을 리턴하고, n이 양의 정수 x의 제곱이 아니라면 -1을 리턴하는 함수를 완성하세요.
+</div>
+
+
+### 제한사항
+
+- n은 1이상, 50000000000000 이하인 양의 정수입니다.
+
+
+### 풀이
+
+n이 어떤 숫자의 제곱이라면 그 숫자에 1을 더한 후 제곱한 값을, 그게 아니라면 -1을 반환하는 문제이다.
+
+
+
+    function solution(n) {
+      const a = Math.sqrt(n)
+      if(a !== Math.floor(a)) {
+          return -1
+      }else {
+          return (a+1)*(a+1)
+      }
+    }
+
+- Math.sqrt() : 제곱근을 구하는 함수. 쉽게 말해 루트를 씌운다고 생각하면 된다. 숫자가 음수일 경우 NaN을 반환한다.
+    - Math.sqrt(9) // 3
+    - Math.sqrt(0)  // 0
+    - Math.sqrt(2); // 1.414213562373095
+    - Math.sqrt(-1); // NaN
+
+<style>
+.text {
+    border: 1px solid #dcdcdc;
+    padding: 10px;
+}
+</style>

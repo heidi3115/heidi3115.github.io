@@ -1,0 +1,56 @@
+---
+layout: post
+title:  "하샤드 수"
+
+[//]: # (date:   2023-01-02 21:34:36 +0900)
+
+categories: Javascript
+---
+
+[//]: # (<h1>Introduction</h1>)
+
+### 문제
+
+<div class="text">
+양의 정수 x가 하샤드 수이려면 x의 자릿수의 합으로 x가 나누어져야 합니다.    
+예를 들어 18의 자릿수 합은 1+8=9이고, 18은 9로 나누어 떨어지므로 18은 하샤드 수입니다.    
+자연수 x를 입력받아 x가 하샤드 수인지 아닌지 검사하는 함수, solution을 완성해주세요.
+</div>
+
+
+### 제한사항
+
+- x는 1 이상, 10000 이하인 정수입니다.
+
+
+### 풀이
+
+x를 각각 1의 자리 숫자로 바꾼 후 모두 더한 합이 x가 나누어떨어지는지 아닌지를 확인하는 문제이다.
+
+
+
+    function solution(x) {
+      const str = [...String(x)] // x를 문자열로 바꾸어 개별 요소로 분리한 배열로 만듦 (ex: 123 -> [1,2,3])
+      var result = 0
+      for(let i = 0; i < str.length; i++) { 
+          result = result + Number(str[i]) // 위에서 만든 배열의 i번째 문자를 숫자로 바꾸어 더하는 반복문 실행
+      }
+      
+      if(x%result === 0) {
+          return true
+      }else {
+          return false
+      }
+    }
+
+
+- Spread 연산자([...a]) : 스프레드 연산자를 사용하면 배열, 문자열, 객체 등 반복 가능한 객체 (Iterable Object)를 개별 요소로 분리할 수 있다.
+    - JavaScript에서 배열을 새로운 변수에 할당하는 경우 새로운 배열은 기존 배열을 참조함. 따라서 새로운 배열을 변경하는 경우 원본 배열도 변경됨.
+    - Spread 연산자는 새로운 복사된 배열을 생성하므로 기존 배열을 건드리지 않음.
+
+<style>
+.text {
+    border: 1px solid #dcdcdc;
+    padding: 10px;
+}
+</style>
