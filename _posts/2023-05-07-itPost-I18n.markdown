@@ -131,7 +131,10 @@ i18next는 Javascript로 작성된 국제화 프레임워크이다. 쉽게 말�
         </button>
         <div>
             <ul>
-                <li>{t('hello')}</li>
+                // 이때, 번역될 텍스트는 앞서 작성한 JSON 파일 내 key값과 동일하게 작성해주어야 한다.
+                // 'hi': '안녕하세요' 로 지정해두었는데, t('hello')와 같이 작성하면 
+                // 번역될 텍스트가 저장되어 있지 않기 때문에 그냥 hello로 출력이 될 것이다.
+                <li>{t('hi')}</li>
                 <li>{t('nice to meet you')}</li>
             </ul>
         </div>
