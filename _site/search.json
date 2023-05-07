@@ -1,6 +1,18 @@
 [
   
     {
+      "title"    : "I18next &amp; 사용법",
+      "title-lower"    : "i18next &amp; 사용법",
+      "sub-titile" : "",
+      "sub-titile-lower" : "",
+      "categories" : "IT",
+      "tags"     : "",
+      "url"      : "/it/2023/05/07/itPost-I18n.html",
+      "date"     : "2023-05-07 00:00:00 +0900",
+      "content"     : "i18next란?i18next는 Javascript로 작성된 국제화 프레임워크이다. 쉽게 말해 다국어 지원 라이브러리라고 할 수 있겠다. 우리는 일반 웹사이트 혹은 쇼핑몰에서 언어 설정 버튼을 자주 볼 수 있다.🔺한 의류 쇼핑몰에 있는 언어 설정 탭이와 같은 언어 설정 변경 기능을 도와주는 것이 i18next다.설치# npm$ npm install i..."
+    } ,
+  
+    {
       "title"    : "하샤드 수",
       "title-lower"    : "하샤드 수",
       "sub-titile" : "",

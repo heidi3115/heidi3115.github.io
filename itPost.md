@@ -11,6 +11,8 @@ date:   2023-01-02 21:34:36 +0900
     <a href="/it/2023/02/26/itPost-CORS.html">CORS </a><br />
     <a href="/it/2023/03/05/itPost-Proxy.html">Proxy </a><br />
     <a href="/it/2023/04/24/itPost-SSE.html">SSE란? (SSE vs Websocket) </a><br />
+    <a href="/it/2023/05/07/itPost-I18n.html">I18n(next) & 사용법</a><br />
+
 
 </div>
 

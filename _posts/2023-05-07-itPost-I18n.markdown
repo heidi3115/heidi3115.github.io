@@ -1,0 +1,146 @@
+---
+layout: post
+title:  "I18next & 사용법"
+
+[//]: # (date:   2023-01-02 21:34:36 +0900)
+
+categories: IT
+---
+
+[//]: # (<h1>Introduction</h1>)
+
+## i18next란?
+
+i18next는 Javascript로 작성된 국제화 프레임워크이다. 쉽게 말해 다국어 지원 라이브러리라고 할 수 있겠다.   
+우리는 일반 웹사이트 혹은 쇼핑몰에서 언어 설정 버튼을 자주 볼 수 있다. 
+
+<img src="/assets/itPost/itPost_i18n_ex.png">
+
+🔺한 의류 쇼핑몰에 있는 언어 설정 탭
+
+이와 같은 언어 설정 변경 기능을 도와주는 것이 i18next다.
+
+
+## 설치 
+
+    # npm
+    $ npm install i18next --save
+
+    # yarn
+    $ yarn add i18next
+
+
+
+## 언어 파일 작성
+
+프로젝트 내에 다음과 같은 JSON 파일을 작성해준다.
+만약 한국어와 영어를 지원하는 기능을 구현하려고 한다면, 영어 파일과 한국어 파일 두가지를 작성해주면 된다.
+
+    // ko.json
+    {
+        "hi": "안녕하세요",
+        "nice to meet you": "반갑습니다",
+    }
+    // en.json
+    {
+        "hi": "hi",
+        "nice to meet you": "nice to meet you",
+    }
+
+이 JSON 파일이 담은 내용들은 i18n을 사용하여 국가 코드에 따라 값을 출력하는 도구가 될 것이다.
+
+
+## i18n 설정하기
+
+원하는 언어의 JSON 파일을 모두 작성해주었다면, 이제는 i18n을 설정할 차례이다.
+파일을 다음과 같이 작성해보자.
+
+
+    import i18n from 'i18next'
+    import { initReactI18next } from 'react-i18next'
+
+    //앞서 작성한 언어 JSON 파일들을 모두 import 해준다.
+    import translationEn from './messages/en.json'
+    import translationKo from './messages/ko.json'
+    
+    i18n
+        .use(initReactI18next)
+        .init({
+            resources: {
+                //translation에 JSON파일을 연결해준다.
+                en: {
+                    translation: translationEn,
+                },
+                ko: {
+                    translation: translationKo,
+                },
+            },
+            lng: "ko-KR",
+            detection: {order: ['path', 'navigator']},
+            fallbackLng: {
+                "ko-KR": ["ko-KR"],
+                default: ["en-US"],
+            },
+            debug: true,
+            defaultNS: "translation",
+            ns: "translation",
+            keySeparator: false,
+            interpolation: {
+                escapeValue: false,
+            },
+            react: {
+                useSuspense: false,
+            },
+        });
+    
+    export default i18n;
+
+
+이제 기본 설정을 모두 끝냈다면, 원하는 파일에서 useTranslation을 호출하여 입력해둔 글자들을 번역할 수 있다.
+
+
+## 사용해보기
+
+미리 만들어둔 메인 페이지에서 다국어 번역 기능을 사용해보겠다.   
+우선 useTranslation과 i18n을 호출해주고, 버튼을 누를 때마다 onClick 이벤트가 발생하게 만들었다.
+
+    // useTranslation 호출
+    import { useTranslation } from 'react-i18next'
+    import i18n from '../../locales/i18n'
+
+    const { t } = useTranslation()
+    const changeLanguage = () => {
+        i18n.language === 'ko' ?
+        i18n.changeLanguage('en') : i18n.changeLanguage('ko')
+    }
+
+    return (
+        <div>
+            <button onClick={()=>changeLanguage()}>
+                {i18n.language === 'ko'? '영어': 'Korean'}
+            </button>
+        </div>
+    )
+
+이렇게 만들어진 onClick 이벤트인 changeLanguage는 누를때마다 'ko'와 'en' 번역을 반복하게 된다.
+이제 번역될 텍스트들을 작성해주어야 한다.
+
+    <div>
+        <button onClick={()=>changeLanguage()}>
+            {i18n.language === 'ko'? '영어로 바꾸기': 'to Korean'}
+        </button>
+        <div>
+            <ul>
+                <li>{t('hello')}</li>
+                <li>{t('nice to meet you')}</li>
+            </ul>
+        </div>
+    </div>
+
+
+## 결과 확인하기
+
+<img src="/assets/itPost/itPost_i18n_1.png">
+<img src="/assets/itPost/itPost_i18n_2.png">
+
+위와 같이 잘 작동하는 것을 확인할 수 있다.
