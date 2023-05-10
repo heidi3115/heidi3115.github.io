@@ -56,45 +56,46 @@ i18next는 Javascript로 작성된 국제화 프레임워크이다. 쉽게 말�
 파일을 다음과 같이 작성해보자.
 
 
-    import i18n from 'i18next'
-    import { initReactI18next } from 'react-i18next'
+import i18n from 'i18next'
+import { initReactI18next } from 'react-i18next'
 
-    //앞서 작성한 언어 JSON 파일들을 모두 import 해준다.
-    import translationEn from './messages/en.json'
-    import translationKo from './messages/ko.json'
-    
-    i18n
-        .use(initReactI18next)
-        .init({
-            resources: {
-                //translation에 JSON파일을 연결해준다.
-                en: {
-                    translation: translationEn,
-                },
-                ko: {
-                    translation: translationKo,
-                },
-            },
-            lng: "ko-KR",
-            detection: {order: ['path', 'navigator']},
-            fallbackLng: {
-                "ko-KR": ["ko-KR"],
-                default: ["en-US"],
-            },
-            debug: true,
-            defaultNS: "translation",
-            ns: "translation",
-            keySeparator: false,
-            interpolation: {
-                escapeValue: false,
-            },
-            react: {
-                useSuspense: false,
-            },
-        });
-    
-    export default i18n;
+//앞서 작성한 언어 JSON 파일들을 모두 import 해준다.
+import translationEn from './messages/en.json'
+import translationKo from './messages/ko.json'
 
+```javascript
+i18n
+    .use(initReactI18next)
+    .init({
+        resources: {
+            //translation에 JSON파일을 연결해준다.
+            en: {
+                translation: translationEn,
+            },
+            ko: {
+                translation: translationKo,
+            },
+        },
+        lng: "ko-KR",
+        detection: {order: ['path', 'navigator']},
+        fallbackLng: {
+            "ko-KR": ["ko-KR"],
+            default: ["en-US"],
+        },
+        debug: true,
+        defaultNS: "translation",
+        ns: "translation",
+        keySeparator: false,
+        interpolation: {
+            escapeValue: false,
+        },
+        react: {
+            useSuspense: false,
+        },
+    });
+
+export default i18n;
+```
 
 이제 기본 설정을 모두 끝냈다면, 원하는 파일에서 useTranslation을 호출하여 입력해둔 글자들을 번역할 수 있다.
 
@@ -104,6 +105,7 @@ i18next는 Javascript로 작성된 국제화 프레임워크이다. 쉽게 말�
 미리 만들어둔 메인 페이지에서 다국어 번역 기능을 사용해보겠다.   
 우선 useTranslation과 i18n을 호출해주고, 버튼을 누를 때마다 onClick 이벤트가 발생하게 만들었다.
 
+```javascript
     // useTranslation 호출
     import { useTranslation } from 'react-i18next'
     import i18n from '../../locales/i18n'
@@ -121,24 +123,26 @@ i18next는 Javascript로 작성된 국제화 프레임워크이다. 쉽게 말�
             </button>
         </div>
     )
+```
 
 이렇게 만들어진 onClick 이벤트인 changeLanguage는 누를때마다 'ko'와 'en' 번역을 반복하게 된다.
 이제 번역될 텍스트들을 작성해주어야 한다.
-
+```javascript
     <div>
-        <button onClick={()=>changeLanguage()}>
-            {i18n.language === 'ko'? '영어로 바꾸기': 'to Korean'}
-        </button>
-        <div>
-            <ul>
-                // 이때, 번역될 텍스트는 앞서 작성한 JSON 파일 내 key값과 동일하게 작성해주어야 한다.
-                // 'hi': '안녕하세요' 로 지정해두었는데, t('hello')와 같이 작성하면 
-                // 번역될 텍스트가 저장되어 있지 않기 때문에 그냥 hello로 출력이 될 것이다.
-                <li>{t('hi')}</li>
-                <li>{t('nice to meet you')}</li>
-            </ul>
-        </div>
+    <button onClick={()=>changeLanguage()}>
+        {i18n.language === 'ko'? '영어로 바꾸기': 'to Korean'}
+    </button>
+    <div>
+        <ul>
+            // 이때, 번역될 텍스트는 앞서 작성한 JSON 파일 내 key값과 동일하게 작성해주어야 한다.
+            // 'hi': '안녕하세요' 로 지정해두었는데, t('hello')와 같이 작성하면
+            // 번역될 텍스트가 저장되어 있지 않기 때문에 그냥 hello로 출력이 될 것이다.
+            <li>{t('hi')}</li>
+            <li>{t('nice to meet you')}</li>
+        </ul>
     </div>
+</div>
+```
 
 
 ## 결과 확인하기

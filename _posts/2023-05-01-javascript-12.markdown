@@ -28,20 +28,21 @@ categories: Javascript
 x를 각각 1의 자리 숫자로 바꾼 후 모두 더한 합이 x가 나누어떨어지는지 아닌지를 확인하는 문제이다.
 
 
+```javascript
+  function solution(x) {
+  const str = [...String(x)] // x를 문자열로 바꾸어 개별 요소로 분리한 배열로 만듦 (ex: 123 -> [1,2,3])
+  var result = 0
+  for(let i = 0; i < str.length; i++) {
+    result = result + Number(str[i]) // 위에서 만든 배열의 i번째 문자를 숫자로 바꾸어 더하는 반복문 실행
+  }
 
-    function solution(x) {
-      const str = [...String(x)] // x를 문자열로 바꾸어 개별 요소로 분리한 배열로 만듦 (ex: 123 -> [1,2,3])
-      var result = 0
-      for(let i = 0; i < str.length; i++) { 
-          result = result + Number(str[i]) // 위에서 만든 배열의 i번째 문자를 숫자로 바꾸어 더하는 반복문 실행
-      }
-      
-      if(x%result === 0) {
-          return true
-      }else {
-          return false
-      }
-    }
+  if(x%result === 0) {
+    return true
+  }else {
+    return false
+  }
+}
+```
 
 
 - Spread 연산자([...a]) : 스프레드 연산자를 사용하면 배열, 문자열, 객체 등 반복 가능한 객체 (Iterable Object)를 개별 요소로 분리할 수 있다.

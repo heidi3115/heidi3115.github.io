@@ -22,8 +22,10 @@ categories: Javascript
 
 작동원리는 다음과 같다
 
-        const test = 5   //// 0000000000000101
-        console.log(~test) //// 1111111111111010 -> -6
+```javascript
+const test = 5   //// 0000000000000101
+console.log(~test) //// 1111111111111010 -> -6
+```
 
 
 

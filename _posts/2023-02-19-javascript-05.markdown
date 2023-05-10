@@ -22,15 +22,15 @@ categories: Javascript
 - 주로 배열과 함께 사용
 
 
+```javascript
+for(초기값; 조건식; 증감연산;) {
+        동작할 내용
+    }
 
-
-        for(초기값; 조건식; 증감연산;) {
-            동작할 내용
-        }
-
-        for (let i = 0; i < 10; i++) { // i가 10보다 작을 때까지만 1씩 더해서 동작 반복해라!
-            console.log(i)
-        }
+    for (let i = 0; i < 10; i++) { // i가 10보다 작을 때까지만 1씩 더해서 동작 반복해라!
+        console.log(i)
+    }
+```
 
 
 
@@ -41,17 +41,19 @@ categories: Javascript
 - 주로 파일 읽고 쓰는 데 사용
 
 
-        while(조건){
-            동작할 내용
-        }
+```javascript
+while(조건){
+    동작할 내용
+}
 
-    
-        let number = 0
-        while(true){
-            number++  // true인 동안 number에 1씩 더해줘라
-                if(number === 10) break // 하지만 10이 되면 멈춰라
-                console.log(number)
-        }
+
+let number = 0
+while(true){
+    number++  // true인 동안 number에 1씩 더해줘라
+        if(number === 10) break // 하지만 10이 되면 멈춰라
+        console.log(number)
+}
+```
 
  while문에는 큰 단점이 존재한다. 만약 조건이 계속해서 true일 경우, 반복문을 멈출 수 없다는 것이다.
 이 경우 컴퓨터가 과부하가 걸려 손상될 수 있다. 이런 사태를 방지하기 위해 break가 존재한다.

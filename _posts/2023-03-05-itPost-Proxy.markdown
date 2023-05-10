@@ -53,12 +53,14 @@ categories: IT
 
 .webpack 설정파일에 proxy 추가
 
-    proxy: {
+```javascript
+proxy: {
       '/api/': { // /api/로 시작하는 url은 아래의 전체 도메인을 추가하고, 옵션을 적용 
         target: 'http://localhost:1234', // 클라이언트에서 api로 보내는 요청은 주소를 1234로 바꿔서 보내겠다 라는 뜻
         changeOrigin: true, // cross origin 허용 설정
       },
     },
+```
 
 - react 프로젝트에서는 package.json파일에 설정해준다.
 - vite로 서버를 구동하는 환경에서는 vite.config.json 파일에서 proxy를 설정해준다.

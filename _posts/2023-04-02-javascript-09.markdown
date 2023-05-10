@@ -31,17 +31,19 @@ categories: Javascript
 
 
 
-    function solution(hp) {
-        var answer = 0;
-        const ant = hp % 5
-        if(ant === 0 ) {
-            return hp / 5
-        }else if(ant > 0 && ant % 3 === 0) {
-            return Math.floor(hp/5) + ant/3
-        }else {
-            return Math.floor(hp/5) + Math.floor(ant/3) + ant%3
-        }
+```javascript
+function solution(hp) {
+    var answer = 0;
+    const ant = hp % 5
+    if(ant === 0 ) {
+        return hp / 5
+    }else if(ant > 0 && ant % 3 === 0) {
+        return Math.floor(hp/5) + ant/3
+    }else {
+        return Math.floor(hp/5) + Math.floor(ant/3) + ant%3
     }
+}
+```
 
 - Math.ceil(): 주어진 숫자보다 크거나 같은 숫자 중 가장 작은 숫자를 integer 로 반환한다. 천장(ceil)에 닿는다고 생각하여 외우면 편하다.
 - Math.floor(): 숫자를 가장 가까운 정수 또는 지정된 유의값의 배수로 내린다. 바닥(floor)에 붙는다고 생각하여 외우면 편하다.

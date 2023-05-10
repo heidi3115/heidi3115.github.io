@@ -34,11 +34,13 @@ CSS는 cascading style sheet의 약자로, 이름에서도 알 수 있듯 사용
 
 사용 예시 
 
-    p { // 모든 p 태그에
-        width: 30px; // 너비를 30px을 주고
-        height: 50px; // 높이를 50px 주고
-        background: tomato; // 배경색을 tomato로 지정해주세요!
-    }
+```javascript
+p { // 모든 p 태그에
+    width: 30px; // 너비를 30px을 주고
+    height: 50px; // 높이를 50px 주고
+    background: tomato; // 배경색을 tomato로 지정해주세요!
+}
+```
 
 
 
@@ -79,15 +81,17 @@ Linking Style Sheet로 CSS 파일을 연결하기 위해서는 HTML 파일에 �
 
 #### Internal 방식
 
-    <p>히히히</p>
+```javascript
+<p>히히히</p>
 
 
-    <style>
-      p {
-        background: red;
-        font-size: 15px;
-      }
-    </style>
+<style>
+  p {
+    background: red;
+    font-size: 15px;
+  }
+</style>
+```
 
 
 ## class 이름 짓기
@@ -95,13 +99,15 @@ Linking Style Sheet로 CSS 파일을 연결하기 위해서는 HTML 파일에 �
 위에서는 HTML에 CSS를 적용할 수 있는 방법들에 대해 알아보았다.
 모든 방법들은 각 태그 별로, 혹은 특정 태그만 지정하여 스타일을 지정할 수 있는데 이를 위해서는 원하는 태그에 class를 부여하여야 한다.
 
-    <p class="test">히히히</p>
-    <style>
-      .test {
-        background: black;
-        font-size: 50px;
-      }
-    </style>
+```javascript
+<p class="test">히히히</p>
+<style>
+  .test {
+    background: black;
+    font-size: 50px;
+  }
+</style>
+```
 
 이 때 class 이름 앞에 점(.)을 찍어야 한다는 것. 그리고 이름 중복을 피해야 한다는 것을 주의하고 작성한다.
 위에서 계속 예시를 들었던 것처럼 태그 명 자체로도 스타일 적용이 가능하다.
@@ -112,15 +118,17 @@ Linking Style Sheet로 CSS 파일을 연결하기 위해서는 HTML 파일에 �
 각 태그에는 class명을 지정하지 않고도 스타일을 적용할 수 있다. Id 선택자라는 것이 바로 그 방법인데, 사용법은 class와 동일하다.
 다만 Id는 이름에서 알 수 있듯이 고유한 이름으로서, 하나의 문서에 하나밖에 사용할 수 없다.
 
-    <p id="title">
-      히히히
-    </p>
-    <style>
-      #title {
-        background: green;
-        font-size: 100px;
-      }
-    </style>
+```javascript
+<p id="title">
+  히히히
+</p>
+<style>
+  #title {
+    background: green;
+    font-size: 100px;
+  }
+</style>
+```
 
 
 
@@ -132,18 +140,20 @@ Linking Style Sheet로 CSS 파일을 연결하기 위해서는 HTML 파일에 �
 우리가 작성했던 코드를 다시 한 번 살펴보자.   
 
 
-    p {  // tag selector
-      background: red;
-      font-size: 15px;
-    }
-    .test { // class selector
-      background: black;
-      font-size: 50px;
-    }
-    #title { // id selector
-       background: green;
-        font-size: 100px;
-    }
+```javascript
+p {  // tag selector
+  background: red;
+  font-size: 15px;
+}
+.test { // class selector
+  background: black;
+  font-size: 50px;
+}
+#title { // id selector
+   background: green;
+    font-size: 100px;
+}
+```
 
 
 우선 태그 자체로 스타일을 적용하는 방법은 `tag selector`라고 부르며, 가장 최하위의 권한을 가지고 있다.

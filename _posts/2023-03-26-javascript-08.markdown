@@ -37,7 +37,8 @@ categories: Javascript
 
 예: `1 2 Z 3 -> 1+2-2(Z)+3`
 
-    function solution(s) {
+```javascript
+function solution(s) {
         var answer = 0;
         const a = s.split(' ') // 공백과 문자로 이루어진 문자열인 s의 공백을 split으로 제거
         
@@ -51,6 +52,7 @@ categories: Javascript
         
         return answer;
     }
+```
 
 - split(): 문자열에서 `separator`가 등장하면 해당 부분은 삭제되고 남은 문자열이 배열로 반환된다.
     예: array.split(' '): 공백(' ')이라는 separator를 지정하여 공백을 삭제하고 나머지 부분을 배열로 반환한다.

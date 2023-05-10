@@ -49,17 +49,18 @@ SSE는 웹소켓과 달리 클라이언트가 서버로부터 데이터만 받�
 
 그런 다음 메시지 이벤트에 대한 핸들러를 설정해야한다. 
 
-
-    eventSource.onopen = (evt) => {
-        console.log('onopen', evt)
-    }
-    eventSource.onmessage = (event) => {
-        console.log(event)
-    }
-    eventSource.addEventListener('이벤트 명', (evt) => {
-        const data = JSON.parse(evt.data)
-        console.log(data)
-    })
+```javascript
+eventSource.onopen = (evt) => {
+    console.log('onopen', evt)
+}
+eventSource.onmessage = (event) => {
+    console.log(event)
+}
+eventSource.addEventListener('이벤트 명', (evt) => {
+    const data = JSON.parse(evt.data)
+    console.log(data)
+})
+```
 
 
 맨 처음 서버와 연결이 되면 onopen 함수가 실행되어 console에서 해당 데이터를 확인할 수 있다.
