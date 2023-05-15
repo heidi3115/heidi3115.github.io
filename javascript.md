@@ -34,6 +34,8 @@ date:   2023-01-02 21:34:36 +0900
     <a href="/javascript/2023/05/01/javascript-11.html"> - 정수 제곱근 판별</a><br />
     <a href="/javascript/2023/05/01/javascript-12.html"> - 하샤드 수</a><br />
     <a href="/javascript/2023/05/15/javascript-13.html"> - 두 정수 사이의 합</a><br />
+    <a href="/javascript/2023/05/15/javascript-14.html"> - 서울에서 김서방 찾기</a><br />
+
 
 
 </div>
