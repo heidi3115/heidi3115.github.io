@@ -1,0 +1,51 @@
+---
+layout: post
+title:  "핸드폰 번호 가리기"
+
+[//]: # (date:   2023-01-02 21:34:36 +0900)
+
+categories: Javascript
+---
+
+[//]: # (<h1>Introduction</h1>)
+
+### 문제
+
+<div class="text">
+프로그래머스 모바일은 개인정보 보호를 위해 고지서를 보낼 때 고객들의 전화번호의 일부를 가립니다. <br />
+전화번호가 문자열 phone_number로 주어졌을 때, 전화번호의 뒷 4자리를 제외한 나머지 숫자를 전부 *으로 가린 문자열을 리턴하는 함수, solution을 완성해주세요.
+</div>
+
+
+### 제한사항
+
+- phone_number는 길이 4 이상, 20이하인 문자열입니다.
+
+
+### 풀이
+
+
+```javascript
+
+function solution(phone_number) {
+    const reverse = [...phone_number].reverse() // spread 연산자로 배열화 한 후 reverse()함수로 뒤집어준다.
+    var answer = []
+
+    for(let i = 0; i < reverse.length; i++) {
+        if(i < 4) {
+            answer.push(reverse[i]) // 0~3번째 자리까지는 숫자 그대로 반환
+        }else {
+            answer.push('*') // 그 외는 별표 처리
+        }
+    }
+
+    return answer.reverse().join('')
+}
+```
+
+<style>
+.text {
+    border: 1px solid #dcdcdc;
+    padding: 10px;
+}
+</style>
