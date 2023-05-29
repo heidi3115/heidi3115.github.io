@@ -23,8 +23,8 @@ plainwhite:
       url: /itPost
 #    - title: 자격증 공부
 #      url: /study
-#    - title: 기타
-#      url: /other
+    - title: 기타
+      url: /other
   name: minseon Kim
   tagline: Developer
   date_format: "%Y,%b %-d"

@@ -1,0 +1,130 @@
+---
+layout: post
+title:  "MUI Data Grid - Field 영역에 GridColDef 사용하기"
+
+[//]: # (date:   2023-01-02 21:34:36 +0900)
+
+categories: other
+---
+
+[//]: # (<h1>Introduction</h1>)
+
+### MUI Data Grid - Field 영역 수정하기
+
+우리는 MUI에서 제공하는 Data Grid 컴포넌트로 테이블 레이아웃을 간편하게 이용할 수 있다.   
+기본 사용법은 column과 row에 테이블로 표현하고자 하는 데이터를 넣어주면 된다.
+
+
+#### Rows
+
+아래는 data grid에서 필요로 하는 row의 예시이다.
+
+```javascript
+const rows = [
+  { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 },
+  { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
+  { id: 3, lastName: 'Lannister', firstName: 'Jaime', age: 45 },
+  { id: 4, lastName: 'Stark', firstName: 'Arya', age: 16 },
+  { id: 5, lastName: 'Targaryen', firstName: 'Daenerys', age: null },
+  { id: 6, lastName: 'Melisandre', firstName: null, age: 150 },
+  { id: 7, lastName: 'Clifford', firstName: 'Ferrara', age: 44 },
+  { id: 8, lastName: 'Frances', firstName: 'Rossini', age: 36 },
+  { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
+];
+```
+
+MUI 공식 문서에 있는 데이터들을 가져왔다. 우리가 기본적으로 받아올 데이터의 형식과 같다.   
+여기서는 데이터를 임의로 작성해서 넣어주었지만, 실제 프로젝트에 적용 시에는 API로 호출하여 위 데이터와 같은 형식의 데이터를 받아와 가공하게 될 것이다.
+
+
+
+
+#### Columns
+data grid에서 필요로 하는 column의 데이터형식은 다음과 같다.
+
+``` javascript
+const columns = [
+    { field: 'id', headerName: 'ID', width: 90 },
+    {
+        field: 'firstName',
+        headerName: 'First name',
+        width: 150,
+        editable: true,
+    },
+     {
+      field: 'lastName',
+       headerName: 'Last name',
+       width: 150,
+       editable: true,
+     },
+    {
+        field: 'age',
+        headerName: 'Age',
+        type: 'number',
+        width: 110,
+        editable: true,
+      },
+    {
+        field: 'fullName',
+        headerName: 'Full name',
+        description: 'This column has a value getter and is not sortable.',
+        sortable: false,
+        width: 160,
+        valueGetter: (params: GridValueGetterParams) =>
+          `${params.row.firstName || ''} ${params.row.lastName || ''}`,
+    },
+]
+```
+
+- field : 위에 작성된 rows의 데이터에서 각 key를 column 작성 시 field에 넣어주면 된다.   
+예를 들어 데이터 key 값들이 'id', 'firstName', 'lastName'... 등등이 있다면 그 값을 입력하면 되는 것이다.
+- headerName : 각 값들의 제목이 될 header 부분이다. 위 데이터를 입력하면 결과는 다음처럼 나타난다.
+
+<img src="../assets/other/dataGrid_table.png">
+
+- valueGetter : 내가 이 포스트를 작성하기로 마음먹은 이유이다. 간단하게 설명하자면, 기본적으로 column에서는 받아온 데이터의 각 key값에 따라 데이터를 바로 넣어주기 때문에,   
+받아온 데이터를 가공하고 싶어도 가공할 수 없다. 하지만 valueGetter 속성을 사용하면 아주 쉽게 데이터를 가공해서 나타낼 수 있다.
+
+
+#### valueGetter 사용법
+
+예를 들어 데이터를 다음과 같이 받아오다고 가정해보자.
+
+```javascript
+{ id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 },
+```
+
+이 상태 그대로 column에 적용한다면 field에는 id, lastName, firstName, age가 들어가게 되고,   
+그 값인 1, Snow, Jon, 35가 그대로 나타나게 될 것이다.   
+하지만 firstName 뒤에 '님'을 붙인다거나, lastName과 firstName을 합친 값을 나타내고 싶다면?   
+그때 필요한 것이 바로 valueGetter 속성이다.
+
+우선 원하는 데이터 가공형식을 담은 함수를 작성해주어야 한다.
+
+```javascript
+const addSomething = (params: GridValueGetterParams) => {
+        return params.row.firstName + '님'
+    }
+```
+
+column에서 입력될 값을 파라미터로 받아와서, 해당 값에 '님'을 붙이는 함수를 만들어줬다.
+이제 column에서 valueGetter 속성을 추가하고 addSomething 함수를 넣어주면!
+
+```javascript
+const column = [
+    { field: 'firstName', headerName: 'firstName', width: 90, valueGetter: addSomething },
+    .
+    .
+    .
+]
+```
+
+테이블에 원하는 대로 결과 값이 나온 것을 확인할 수 있다.
+참 쉽죠?
+
+<style>
+.text {
+    border: 1px solid #dcdcdc;
+    padding: 10px;
+}
+</style>

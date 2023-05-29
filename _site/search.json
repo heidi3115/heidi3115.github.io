@@ -1,6 +1,18 @@
 [
   
     {
+      "title"    : "MUI Data Grid - Field 영역에 GridColDef 사용하기",
+      "title-lower"    : "mui data grid - field 영역에 gridcoldef 사용하기",
+      "sub-titile" : "",
+      "sub-titile-lower" : "",
+      "categories" : "other",
+      "tags"     : "",
+      "url"      : "/other/2023/05/29/other-01.html",
+      "date"     : "2023-05-29 00:00:00 +0900",
+      "content"     : "MUI Data Grid - Field 영역 수정하기우리는 MUI에서 제공하는 Data Grid 컴포넌트로 테이블 레이아웃을 간편하게 이용할 수 있다. 기본 사용법은 column과 row에 테이블로 표현하고자 하는 데이터를 넣어주면 된다.Rows아래는 data grid에서 필요로 하는 row의 예시이다.const rows = [  { id: 1, la..."
+    } ,
+  
+    {
       "title"    : "음양 더하기",
       "title-lower"    : "음양 더하기",
       "sub-titile" : "",
