@@ -1,0 +1,60 @@
+---
+layout: post
+title:  "수박수박수박수박수박수?"
+
+[//]: # (date:   2023-01-02 21:34:36 +0900)
+
+categories: Javascript
+---
+
+[//]: # (<h1>Introduction</h1>)
+
+### 문제
+
+<div class="text">
+길이가 n이고, "수박수박수박수...."와 같은 패턴을 유지하는 문자열을 리턴하는 함수, solution을 완성하세요.<br />
+예를들어 n이 4이면 "수박수박"을 리턴하고 3이라면 "수박수"를 리턴하면 됩니다.
+</div>
+
+
+### 제한사항
+
+- n은 길이 10,000이하인 자연수입니다.
+
+
+### 풀이
+
+
+
+```javascript
+function solution(n) {
+    var answer = '수박'
+    if(n % 2 == 0) {
+        answer = answer.repeat(n/2)
+    }else {
+        answer = answer.repeat(n/2) + '수'
+    }
+    return answer
+}
+```
+
+- repeat(): repeat() 메서드는 문자열을 주어진 횟수만큼 반복해 붙인 새로운 문자열을 반환한다.   
+str.repeat(count) 형식으로 사용하면 되는데, 이때 count에 들어갈 매개변수는 문자열을 반복할 횟수이며,   
+0과 양의 무한대 사이의 정수([0, +∞))를 입력해주면 된다.
+
+예)   
+  ```javascript
+  'abc'.repeat(-1);   // RangeError
+  'abc'.repeat(0);    // ''
+  'abc'.repeat(1);    // 'abc'
+  'abc'.repeat(2);    // 'abcabc'
+  'abc'.repeat(3.5);  // 'abcabcabc' (count will be converted to integer)
+  'abc'.repeat(1/0);  // RangeError```
+```
+
+<style>
+.text {
+    border: 1px solid #dcdcdc;
+    padding: 10px;
+}
+</style>
