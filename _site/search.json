@@ -1,6 +1,18 @@
 [
   
     {
+      "title"    : "내적",
+      "title-lower"    : "내적",
+      "sub-titile" : "",
+      "sub-titile-lower" : "",
+      "categories" : "Javascript",
+      "tags"     : "",
+      "url"      : "/javascript/2023/06/11/javascript-18.html",
+      "date"     : "2023-06-11 00:00:00 +0900",
+      "content"     : "문제길이가 같은 두 1차원 정수 배열 a, b가 매개변수로 주어집니다.a와 b의 내적을 return 하도록 solution 함수를 완성해주세요.이때, a와 b의 내적은 a[0]*b[0] + a[1]*b[1] + ... + a[n-1]*b[n-1] 입니다.(n은 a, b의 길이)제한사항  a, b의 길이는 1 이상 1,000 이하입니다.  a, b의 모..."
+    } ,
+  
+    {
       "title"    : "수박수박수박수박수박수?",
       "title-lower"    : "수박수박수박수박수박수?",
       "sub-titile" : "",
