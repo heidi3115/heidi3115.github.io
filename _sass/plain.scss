@@ -78,6 +78,7 @@ main {
   .about {
     display: flex;
     height: 100vh;
+    //overflow: scroll;
     padding-bottom: 15vh;
     @media screen and (max-width: $mobileW) {
       height: auto;
@@ -150,12 +151,15 @@ main {
 
 .navigation {
   width: 80%;
-
+  ul::-webkit-scrollbar {
+    display: none;
+  }
   ul {
     list-style-type: none;
     padding: 0;
     margin-top: 0;
-
+    height: 250px;
+    overflow: scroll;
     li:last-child {
       a {
         border-bottom: 0;

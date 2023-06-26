@@ -55,7 +55,7 @@ i18next는 Javascript로 작성된 국제화 프레임워크이다. 쉽게 말�
 원하는 언어의 JSON 파일을 모두 작성해주었다면, 이제는 i18n을 설정할 차례이다.
 파일을 다음과 같이 작성해보자.
 
-
+```javascript
 import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
 
@@ -63,7 +63,6 @@ import { initReactI18next } from 'react-i18next'
 import translationEn from './messages/en.json'
 import translationKo from './messages/ko.json'
 
-```javascript
 i18n
     .use(initReactI18next)
     .init({
