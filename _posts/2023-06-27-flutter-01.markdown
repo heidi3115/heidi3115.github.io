@@ -111,7 +111,7 @@ onTap (index) { //위에서 설명한대로 각 탭들은 순서대로 index를 
 
 여기까지 작성하고 페이지를 새로고침 해보자. 
 
-![img_1.png](img_1.png)
+![img_1.png](../assets/flutter/flutter-01.png)
 
 지정한대로 첫번째 화면으로 지정된 탭이 첫 화면으로 보일 것이다.   
 탭을 하나씩 눌러보면, 화면은 잘 바뀌지만 정작 NavigationBar에는 아무 효과가 나타나지 않을 것이다.   
@@ -156,5 +156,5 @@ bottomNavigationBar: BottomNavigationBar(
 ```
 
 
-![img.png](img.png)
+![img.png](../assets/flutter/flutter-02.png)
 완벽하게 작동하는 BottomNavigationBar를 완성하였다.
