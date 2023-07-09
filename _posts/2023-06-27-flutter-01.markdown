@@ -1,0 +1,160 @@
+---
+layout: post
+title:  "[Flutter] BottomNavigationBar 사용하기 & 메뉴 4개 이상 추가하기"
+
+[//]: # (date:   2023-01-02 21:34:36 +0900)
+
+categories: Flutter
+---
+
+[//]: # (<h1>Introduction</h1>)
+
+
+
+Flutter에는 쉽게 레이아웃을 만들 수 있게 AppBar와 BottomNavigationBar라는 기능을 제공한다.   
+
+BottomNavigaionBar의 기본 사용법은 다음과 같다.
+
+```javascript
+
+bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.home),label: '홈'),
+          BottomNavigationBarItem(icon: Icon(Icons.아이콘1),label: '탭1'),
+          BottomNavigationBarItem(icon: Icon(Icons.아이콘2),label: '탭2')
+        ],
+        onTap: () {},
+      ),
+
+```
+
+### BottomNavigationBarItem의 필수 속성
+
+우선, items에 이동하길 원하는 페이지들을 배열로 만들어 넣어 준다.   
+BottomNavigationBarItem에는 icon과 label 속성이 필수로 들어가는데, label은 **showSelectedLabels: false** 를 추가하여 숨길 수 있으나 icon은 다른 방법으로 만들어야지만 숨기는게 가능하다. 이 부분에 대해서는 다른 글에서 설명하겠다.   
+
+### onTap
+
+onTap은 BottomNavigationBar의 각 아이템을 클릭했을 때 발생할 이벤트들이 담기게 될 함수이다. 제일 중요한 이벤트는 클릭된 탭의 색상 등이 바뀌는 이벤트로, 클릭된 탭과 그렇지 않은 탭의 상태에 차이를 두어야 UX/UI를 고려한 디자인이 완성될 것이다.   
+또한, 탭이 변경된 것을 감지하려면 변경된 사항을 Flutter Framework에 알려줘야 한다. 이때 setState()함수를 사용해야 한다.
+
+```javascript
+onTap: () {
+    setState(
+        변경할 내용!
+    )
+}
+```
+
+
+### BottomNavigationBar와 보여줄 컨텐츠 연결하기
+
+onTap에 setState()함수를 넣어주었고, 이제 setState()에게 변경할 내용을 입력해주어야 한다.
+
+위에서 작성한 코드에는 현재 body는 없고 bottom만 있기 때문에 body를 추가해준 후 IndexedStack을 추가한다.
+
+```javascript
+body: IndexedStack(
+        children: [
+          SizedBox(child: 보여줄화면1()), // 보여줄 화면은 각각 컴포넌트로 만들어 연결해주었다.
+          SizedBox(child: 보여줄화면2()),
+          SizedBox(child: 보여줄화면3()),
+        ],
+      ),
+```
+
+보여줄 컴포넌트들이 모두 import가 완료되었다면, 이제 BottomNavigationBar와 IndexedStack을 연결해줄 차례이다.   
+연결해주기에 앞서 BottomNavigationBar의 각 Item은 순서대로 번호(Index)를 가지게 된다는 것을 알아야한다.   
+
+```javascript
+items: [
+          BottomNavigationBarItem(icon: Icon(Icons.home),label: '홈'),
+          BottomNavigationBarItem(icon: Icon(Icons.아이콘1),label: '탭1'),
+          BottomNavigationBarItem(icon: Icon(Icons.아이콘2),label: '탭2')
+        ],
+```
+
+위에서 작성한 코드를 다시 살펴보자. label이 '홈'인 첫번째 아이템은 0이라는 Index를 부여받는다. 마찬가지로 '탭1'은 1, '탭2'는 2라는 Index를 부여받게 될 것이다.   
+
+이제 가장 처음에 받아올 인덱스 번호를 지정해줘야 한다. 나는 '홈' 화면을 처음 컨텐츠로 받아오고 싶어서 다음과 같이 만들어주었다.
+
+```javascript
+  int _selectedIndex = 0;
+```
+이름은 내 마음대로 지정하면 된다.   
+나는 _selectedIndex라는 이름으로 만들어주었으니 IndexedStack안에 index항목을 추가하여 _selectedIndex를 넣어준다.
+
+```javascript
+body: IndexedStack(
+    index: _selectedIndex, // 여기!
+    children: [
+      SizedBox(child: 보여줄화면1()), // 보여줄 화면은 각각 컴포넌트로 만들어 연결해주었다.
+      SizedBox(child: 보여줄화면2()),
+      SizedBox(child: 보여줄화면3()),
+    ],
+  ),
+```
+
+
+여기까지 작성 후 새로고침 해보면 위에서 지정된 0번째 페이지가 첫 화면으로 나오는 것을 볼 수 있다.   
+이제 마지막단계!   
+위에 작성한 onTap의 setState()함수에 index를 받아와 _selectedIndex에 보내보자.
+
+```javascript
+onTap (index) { //위에서 설명한대로 각 탭들은 순서대로 index를 부여받았기 때문에 탭할 때 해당 숫자를 받아올 수 있다.
+                // 이름은 index가 아니라 hello여도 상관없음.
+    setState(
+        _selectedIndex = index;
+    )
+}
+```
+
+여기까지 작성하고 페이지를 새로고침 해보자. 
+
+![img_1.png](img_1.png)
+
+지정한대로 첫번째 화면으로 지정된 탭이 첫 화면으로 보일 것이다.   
+탭을 하나씩 눌러보면, 화면은 잘 바뀌지만 정작 NavigationBar에는 아무 효과가 나타나지 않을 것이다.   
+보여줄 컨텐츠 바꿔줘! 라는 명령은 내렸지만 탭도 바꿔줘! 라는 명령을 안내렸기 때문이다.   
+onTap밑에 currentIndex라는 속성을 한 줄 추가해주자.
+
+```javascript
+onTap: (index) {
+    setState(() {
+        _selectedIndex = index;
+    });
+},
+currentIndex: _selectedIndex,
+```
+
+끝!
+
+
+
+
+### ++ BottomNavigationBar Item 네 개 이상 만들기
+
+BottomNavigationBar는 기본 아이템을 2개 이상 넣어야 한다는 조건이 있다. 위에서는 아이템을 세 개를 넣어서 만들어 보았다.   
+그런데 만약 네 개, 혹은 다섯 개 그 이상의 아이템을 넣고 싶다면? 그냥 바로 넣어주면 화면에 잘 보일까?
+
+
+정답은 **'아니'** 다.
+
+
+
+
+무조건 두 개 이상 넣어야 하면서, 정작 네 개를 넣으면 바가 제대로 나오지 않는다. 정말 어처구니가 없다.
+
+BottomNavigationBar의 속성으로 type을 지정해주자.
+
+```javascript
+bottomNavigationBar: BottomNavigationBar(
+  type: BottomNavigationBarType.fixed,
+    .
+    .
+    .
+```
+
+
+![img.png](img.png)
+완벽하게 작동하는 BottomNavigationBar를 완성하였다.

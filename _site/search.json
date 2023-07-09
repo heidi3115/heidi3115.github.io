@@ -1,6 +1,18 @@
 [
   
     {
+      "title"    : "[Flutter] BottomNavigationBar 사용하기 &amp; 메뉴 4개 이상 추가하기",
+      "title-lower"    : "[flutter] bottomnavigationbar 사용하기 &amp; 메뉴 4개 이상 추가하기",
+      "sub-titile" : "",
+      "sub-titile-lower" : "",
+      "categories" : "Flutter",
+      "tags"     : "",
+      "url"      : "/flutter/2023/06/27/flutter-01.html",
+      "date"     : "2023-06-27 00:00:00 +0900",
+      "content"     : "Flutter에는 쉽게 레이아웃을 만들 수 있게 AppBar와 BottomNavigationBar라는 기능을 제공한다.BottomNavigaionBar의 기본 사용법은 다음과 같다.bottomNavigationBar: BottomNavigationBar(        items: [          BottomNavigationBarItem(icon:..."
+    } ,
+  
+    {
       "title"    : "문자열 내림차순으로 배치하기",
       "title-lower"    : "문자열 내림차순으로 배치하기",
       "sub-titile" : "",
