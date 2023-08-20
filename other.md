@@ -6,7 +6,7 @@ date:   2023-05-29 21:34:36 +0900
 ---
 
 
-<h2 style="border-bottom:1px solid #dcdcdc; padding-bottom:10px;">Javascript</h2>
+<h2 style="border-bottom:1px solid #dcdcdc; padding-bottom:10px;">기타</h2>
 
 <div style='font-size:20px'>
     <h2>MUI - React 사용하기</h2>

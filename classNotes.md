@@ -10,10 +10,13 @@ date:   2023-01-02 21:34:36 +0900
 ----
 <div style='font-size:20px; margin-bottom: 100px'>
 <a href="/notes/2023/02/12/classNotes-HTML-CSS.html">HTML/CSS 소개</a><br />
-<a href="/notes/2023/02/12/classNotes-RegularExpression.html">정규표현식 (regular expression)</a><br />
 </div>
 
-
+## 개인 프로젝트
+---
+<div style='font-size:20px; margin-bottom: 100px'>
+    <a href='/notes/2023/08/20/classNotes-todoApp.html'>Todo App 만들기</a>
+</div>
 
 ## 자격증 공부
 
