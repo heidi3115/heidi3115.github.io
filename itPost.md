@@ -19,10 +19,6 @@ date:   2023-01-02 21:34:36 +0900
 <style>
 div {
 }
-a {
-    color: #000 !important;
-    text-decoration: none;
-}
 h2 {
     border-bottom:1px solid #dcdcdc; 
     padding-bottom:10px;
