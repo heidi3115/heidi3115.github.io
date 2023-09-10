@@ -65,7 +65,7 @@ Node.js의 프레임워크로, Node.js의 원칙과 방법을 이용하여 서�
 
 ### 2. 제작 과정
 
-#### 2.1. Node.js + express로 서버 구성하기
+#### <a href='/notes/2023/08/28/classNotes-todoApp2.html'>2.1. Node.js + express로 서버 구성하기</a>
 #### 2.2. mongoDB 세팅하기
 #### 2.3. 간단한 레이아웃 적용 및 Todo App 구현
 

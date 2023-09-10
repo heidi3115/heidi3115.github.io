@@ -1,6 +1,30 @@
 [
   
     {
+      "title"    : "[Flutter] Flutter의 initState vs React의 useEffect",
+      "title-lower"    : "[flutter] flutter의 initstate vs react의 useeffect",
+      "sub-titile" : "",
+      "sub-titile-lower" : "",
+      "categories" : "Flutter",
+      "tags"     : "",
+      "url"      : "/flutter/2023/09/10/flutter-02.html",
+      "date"     : "2023-09-10 00:00:00 +0900",
+      "content"     : "Flutter의 initState와 React의 useEffect는 둘 다 UI 프레임워크에서 상태 관리와 생명 주기 관리를 지원하는데 사용된다. 하지만 둘은 차이점이 존재하는데, 이번 게시글에서는 Flutter의 initState와 React의 uesEffect에 대해 다뤄보려고 한다.1. Flutter의 ‘initState’initState는 Fl..."
+    } ,
+  
+    {
+      "title"    : "Todo App 만들기 - Node.js + express로 서버 구성하기",
+      "title-lower"    : "todo app 만들기 - node.js + express로 서버 구성하기",
+      "sub-titile" : "",
+      "sub-titile-lower" : "",
+      "categories" : "Notes",
+      "tags"     : "",
+      "url"      : "/notes/2023/08/28/classNotes-todoApp2.html",
+      "date"     : "2023-08-28 00:00:00 +0900",
+      "content"     : "Node.js + express로 서버 구성하기지난 포스팅에 이어 이번 포스팅에서는 Node와 express로 서버를 구성한 기록을 남겨보려 한다.Node.js란?"
+    } ,
+  
+    {
       "title"    : "Todo App 만들기",
       "title-lower"    : "todo app 만들기",
       "sub-titile" : "",
