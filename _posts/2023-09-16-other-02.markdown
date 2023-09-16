@@ -132,7 +132,7 @@ export default SModal
 
 여기까지 구현한 모습은 다음과 같다.
 
-<img src="../assets/other/test.png">
+<img src="/assets/other/test.png">
 
 입력받은 header와 body값도 없고, 정말 못생겼지만 기능 구현을 먼저 해보자.   
 이제 모달이 활성화 된 상태라고 가정하고, 버튼을 누르면 모달이 닫히도록 만들어야 한다.
@@ -252,9 +252,11 @@ B페이지 -------
 ```
 
 이제 원하는대로 레이아웃을 수정해 준 후, A페이지와 B페이지에서의 모달을 비교해보겠다.
-<img src="../assets/other/pageA.png">
+<img src="/assets/other/pageA.png">
 
-<img src="../assets/other/pageB.png">
+<img src="/assets/other/pageB.png">
+
+<img src="/assets/other/pageB.png">
 
 
 
