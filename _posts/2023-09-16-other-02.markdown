@@ -256,8 +256,6 @@ B페이지 -------
 
 <img src="/assets/other/pageB.png">
 
-<img src="/assets/other/pageB.png">
-
 
 
 <style>
