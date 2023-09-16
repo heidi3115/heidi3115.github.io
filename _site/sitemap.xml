@@ -6,7 +6,7 @@
                 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
         <url>
             <loc>http://localhost:4000</loc>
-	    <lastmod>2023-09-16T16:31:54+09:00</lastmod>
+	    <lastmod>2023-09-16T16:33:14+09:00</lastmod>
             <priority>1.00</priority>
         </url><url>
                 <loc>http://localhost:4000/other/2023/09/16/other-02.html</loc>
